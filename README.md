@@ -37,9 +37,9 @@ Fungsi: File ini berisi metode main, yang menjadi titik masuk untuk menjalankan 
 - Constructor: Kelas ini memiliki constructor yang menginisialisasi objek Movie dengan nilai-nilai yang diberikan untuk setiap properti saat objek dibuat. Misalnya, saat pengguna menambahkan film baru, constructor akan dipanggil untuk membuat objek Movie.
 
 ##### Metode di Kelas Film:
-- public abstract class Film
-- Getter: getJudul, getTahunRilis, getSutradara, getJenisGenre
-- Setter: setJudul, setTahunRilis, setSutradara, setJenisGenre
+- public abstract void displayInfo()
+- Getter: getJudul(), getTahunRilis(), getSutradara(), getJenisGenre()
+- Setter: setJudul(), setTahunRilis(), setSutradara(), setJenisGenre()
 
 ##### 2. Movie
 - Inheritance: di kelas ini membuat subclass dari Film
@@ -50,7 +50,7 @@ Fungsi: File ini berisi metode main, yang menjadi titik masuk untuk menjalankan 
 @Override public void displayInfo() : implementasi untuk menampilkan informasi terkait film
 
 ##### 3. MovieManager
-- CRUD
+- MovieManager mengimplementasikan interface CRUDOperations untuk operasi CRUD seperti create, read, update, dan delete.
 - Fungsi: Untuk melakukan input dalam proses CRUD
 - public class MovieManager implements CRUDOperations
 
@@ -62,7 +62,8 @@ Fungsi: File ini berisi metode main, yang menjadi titik masuk untuk menjalankan 
 
 ##### 4. ActionMovie
 - Inheritance: di kelas ini membuat subclass dari Movie untuk jenis film yang lebih spesifik, yaitu misalnya ActionMovie.
-- public final class ActionMovie extends Movie : subclass dari kelas Movie. 
+- public final class ActionMovie extends Movie : subclass dari kelas Movie.
+- Final Keyword: Kata kunci final diterapkan pada kelas ActionMovie yang menandakan bahwa kelas ini tidak bisa diwarisi. Juga diterapkan pada properti seperti specialEffects di ActionMovie
 - Fungsi: merepresentasikan genre film aksi
 
 ##### Properti tambahan:
@@ -73,7 +74,8 @@ private final String specialEffects; : efek spesial film genre aksi
 
 ##### 5. DramaMovie
 - Inheritance: di kelas ini membuat subclass dari Movie untuk jenis film yang lebih spesifik, yaitu misalnya DramaMovie.
-- public final class DramaMovie extends Movie : subclass dari kelas Movie. 
+- public final class DramaMovie extends Movie : subclass dari kelas Movie.
+- Final Keyword: Kata kunci final diterapkan pada kelas DramaMovie yang menandakan bahwa kelas ini tidak bisa diwarisi. Juga diterapkan pada properti seperti emotionalDepth di DramaMovie
 - Fungsi: merepresentasikan genre film drama
 
 ##### Properti tambahan:
@@ -82,6 +84,9 @@ private final String emotionalDepth; : kedalaman emosi dari film genre drama
 ##### Metode di Kelas DramaMovie:
 @Override public final void displayInfo() : implementasi untuk menampilkan informasi terkait film dengan genre drama
 
+##### INTERFACE:
+- fungsi: untuk penerapan CRUD, yaitu untuk menambahkan film, melihat film, update film, dan menghapus film di dalam bioskop.
+  
 #### 3. Package manajemen_genrefilm
 
 ##### Kelas: Genre
@@ -89,8 +94,11 @@ private final String emotionalDepth; : kedalaman emosi dari film genre drama
 - Fungsi: Kelas ini berfungsi untuk menyimpan daftar film yang termasuk dalam genre tersebut.
 - Constructor: Kelas ini juga memiliki constructor untuk menginisialisasi objek Genre, termasuk properti untuk menyimpan nama genre, deskripsi, dan daftar film.
 
-##### INTERFACE:
-- fungsi: untuk penerapan CRUD, yaitu untuk menambahkan film, melihat film, update film, dan menghapus film di dalam bioskop.
+### Fitur Utama
+1. Menambahkan film baru di bioskop.
+2. Menampilkan semua film yang tayang di bioskop.
+3. Memperbarui informasi film yang ada.
+4. Menghapus film di bioskop.
 
 ### Output
 1. Menu Utama
