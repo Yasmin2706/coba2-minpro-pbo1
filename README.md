@@ -6,7 +6,7 @@
 ## Kelas : A2
 
 ### Deskripsi Umum
-Program manajemen film dalam bioskop ini dikembangkan untuk memenuhi kebutuhan pengelolaan daftar film secara efisien dan terorganisir. Dalam dunia perfilman yang terus berkembang, bioskop dan situs film perlu memiliki sistem yang memungkinkan pengguna untuk menambah, mengedit, menampilkan, dan menghapus film dengan mudah. Dengan program ini, pengguna dapat mengelola informasi film dan genre secara terstruktur, sehingga memudahkan dalam mencari dan menyajikan film kepada penonton. Dengan memisahkan logika ke dalam dua package (manajemen_film dan manajemen_genre), program menjadi lebih terstruktur dan mudah dikelola. Penggunaan method, constructor, percabangan, perulangan, koleksi seperti ArrayList, inheritance, encapsulation, abstraction, interface, dan final keyword berkontribusi pada fungsionalitas dan efisiensi program.
+Program manajemen film dalam bioskop ini dikembangkan untuk memenuhi kebutuhan pengelolaan daftar film secara efisien dan terorganisir. Dalam dunia perfilman yang terus berkembang, bioskop dan situs film perlu memiliki sistem yang memungkinkan pengguna untuk menambah, mengedit, menampilkan, dan menghapus film dengan mudah. Dengan program ini, pengguna dapat mengelola informasi film dan genre secara terstruktur, sehingga memudahkan dalam mencari dan menyajikan film kepada penonton. Dengan memisahkan logika ke dalam dua package (MainBioskop, manajemen_film, dan manajemen_genre), program menjadi lebih terstruktur dan mudah dikelola. Penggunaan method, constructor, percabangan, perulangan, koleksi seperti ArrayList, inheritance, encapsulation, abstraction, interface, dan final keyword berkontribusi pada fungsionalitas dan efisiensi program.
 
 ### Komponen Utama
 Film dan Genre. Film mewakili informasi dasar tentang judul, tahun rilis, dan sutradara, sedangkan genre berfungsi sebagai kategori yang mengelompokkan film berdasarkan tema atau jenisnya.
@@ -109,7 +109,8 @@ private final String emotionalDepth; : kedalaman emosi dari film genre drama
    1) Opsi 1
       Tambah film
 
-      ![image](https://github.com/user-attachments/assets/6383fc93-87f6-48b0-98f9-bf563d68e6e2)
+    ![Screenshot 2024-10-14 194136](https://github.com/user-attachments/assets/602163ac-428a-4630-a7d3-8ac7834ba3e5)
+
 
       Looping ke menu utama
 
@@ -127,7 +128,8 @@ private final String emotionalDepth; : kedalaman emosi dari film genre drama
    3) Opsi 3
       Hapus film
   
-      ![image](https://github.com/user-attachments/assets/e59c56d9-ff62-476a-8158-c523e43c21bd)
+      ![Screenshot 2024-10-14 194411](https://github.com/user-attachments/assets/4d7834af-5db3-4fc1-822b-b73eb525b3bc)
+
 
       Looping ke menu utama
       
@@ -137,7 +139,8 @@ private final String emotionalDepth; : kedalaman emosi dari film genre drama
    5) Opsi 4
       Update film
   
-      ![image](https://github.com/user-attachments/assets/ae7be4d7-3d9e-4647-875b-22692ffcb260)
+      ![Screenshot 2024-10-14 194516](https://github.com/user-attachments/assets/955c104c-8a1f-4725-830f-d7e24ffc9da0)
+
 
       Looping ke menu utama
       
@@ -147,4 +150,5 @@ private final String emotionalDepth; : kedalaman emosi dari film genre drama
    7) Opsi 5
       Keluar
 
-      ![image](https://github.com/user-attachments/assets/9481e90c-fce3-4fa5-a4eb-204f31ce6e9b)
+      ![Screenshot 2024-10-14 194535](https://github.com/user-attachments/assets/2bc068ba-8ec7-4086-b9b4-4a2df37b45b8)
+
