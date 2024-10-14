@@ -26,23 +26,71 @@ Fungsi: File ini berisi metode main, yang menjadi titik masuk untuk menjalankan 
 - public static void main(String[] args) : Metode ini menjalankan program utama yang menangani input dari pengguna untuk operasi CRUD yang bisa melakukan looping, yaitu kembali ke menu utama.
 
 #### 2. Package manajemen_film
+- Package ini berisi kelas-kelas yang menangani data dan logika terkait film dan juga Interface untuk penerapan CRUD.
+
+##### KELAS:
+
+##### 1. Film
+- Abstract: di kelas ini menggunakan kelas abstrak untuk menyederhanakan konsep yang lebih umum, yaitu misalnya Film
+- Encapsulation (Getter dan Setter): untuk mengakses dan memodifikasi atribut (properti) dari kelas Film.
+- Kelas ini memiliki beberapa properti untuk menyimpan informasi yang relevan untuk film, seperti judul, tahunRilis, sutradara, dan Genre.
+- Constructor: Kelas ini memiliki constructor yang menginisialisasi objek Movie dengan nilai-nilai yang diberikan untuk setiap properti saat objek dibuat. Misalnya, saat pengguna menambahkan film baru, constructor akan dipanggil untuk membuat objek Movie.
+
+##### Metode di Kelas Film:
+- public abstract class Film
+- Getter: getJudul, getTahunRilis, getSutradara, getJenisGenre
+- Setter: setJudul, setTahunRilis, setSutradara, setJenisGenre
+
+##### 2. Movie
+- Inheritance: di kelas ini membuat subclass dari Film
+- Fungsi: merepresentasikan berbagai film di bioskop
+- public class Movie extends Film : subclass dari kelas Film
+
+##### Metode di Kelas Movie:
+@Override public void displayInfo() : implementasi untuk menampilkan informasi terkait film
+
+##### 3. MovieManager
+- CRUD
+- Fungsi: Untuk melakukan input dalam proses CRUD
+- public class MovieManager implements CRUDOperations
+
+##### Metode di Kelas MovieManager:
+- @Override public void create()
+- @Override public void read()
+- @Override public void update()
+- @Override public void delete()
+
+##### 4. ActionMovie
+- Inheritance: di kelas ini membuat subclass dari Movie untuk jenis film yang lebih spesifik, yaitu misalnya ActionMovie.
+- public final class ActionMovie extends Movie : subclass dari kelas Movie. 
+- Fungsi: merepresentasikan genre film aksi
+
+##### Properti tambahan:
+private final String specialEffects; : efek spesial film genre aksi
+  
+##### Metode di Kelas ActionMovie:
+@Override public final void displayInfo() : implementasi untuk menampilkan informasi terkait film dengan genre aksi
+
+##### 5. DramaMovie
+- Inheritance: di kelas ini membuat subclass dari Movie untuk jenis film yang lebih spesifik, yaitu misalnya DramaMovie.
+- public final class DramaMovie extends Movie : subclass dari kelas Movie. 
+- Fungsi: merepresentasikan genre film drama
+
+##### Properti tambahan:
+private final String emotionalDepth; : kedalaman emosi dari film genre drama
+
+##### Metode di Kelas DramaMovie:
+@Override public final void displayInfo() : implementasi untuk menampilkan informasi terkait film dengan genre drama
 
 #### 3. Package manajemen_genrefilm
 
-============================================================================
+##### Kelas: Genre
+- Kelas ini mengelola kategori film dan kumpulan film dalam genre tertentu.
+- Fungsi: Kelas ini berfungsi untuk menyimpan daftar film yang termasuk dalam genre tersebut.
+- Constructor: Kelas ini juga memiliki constructor untuk menginisialisasi objek Genre, termasuk properti untuk menyimpan nama genre, deskripsi, dan daftar film.
 
-
-#### Package
-1. manajemen_film
-   - Package ini berisi file Movie.java, yang menangani data dan logika terkait film.
-   - Class: Movie, yaitu untuk menangani data film. Kelas ini memiliki beberapa properti untuk menyimpan informasi yang relevan untuk film, seperti judul, tahunRilis, dan sutradara.
-   - Method & Constructor: Kelas ini memiliki constructor yang menginisialisasi objek Movie dengan nilai-nilai yang diberikan untuk setiap properti saat objek dibuat. Misalnya, saat pengguna menambahkan film baru, constructor akan dipanggil untuk membuat objek Movie.
-     
-2. manajemen_genrefilm
-   - Package ini berisi file Genre.java, yang mengelola kategori film dan kumpulan film dalam genre tertentu.
-   - Class: Genre, yaitu untuk menangani kumpulan film dalam kategori tertentu. Kelas ini berfungsi untuk menyimpan daftar film yang termasuk dalam genre tersebut.
-   - Method & Constructor: Kelas ini juga memiliki constructor untuk menginisialisasi objek Genre, termasuk properti untuk menyimpan nama genre, deskripsi, dan daftar film.
-============================================================================
+##### INTERFACE:
+- fungsi: untuk penerapan CRUD, yaitu untuk menambahkan film, melihat film, update film, dan menghapus film di dalam bioskop.
 
 ### Output
 1. Menu Utama
